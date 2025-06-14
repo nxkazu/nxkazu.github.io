@@ -369,7 +369,7 @@
     <footer>
         <div class="container">
             <div class="footer-logo">Equarix</div>
-            <p class="copyright">© 2023 Equarix. Все права защищены.</p>
+            <p class="copyright">© 2025 Equarix. https://t.me/equarix.</p>
         </div>
     </footer>
 
@@ -639,7 +639,6 @@
 
         ];
 
-        // DOM Elements
         const plansContainer = document.getElementById('plans-container');
         const locationButtons = document.querySelectorAll('.location-btn');
         const sortSelect = document.getElementById('sort-select');
@@ -648,11 +647,9 @@
         let currentLocation = 'all';
         let currentSort = 'price-asc';
 
-        // Initialize
         document.addEventListener('DOMContentLoaded', () => {
             renderPlans();
             
-            // Add event listeners
             locationButtons.forEach(button => {
                 button.addEventListener('click', () => {
                     locationButtons.forEach(btn => btn.classList.remove('active'));
@@ -668,27 +665,22 @@
             });
         });
 
-        // Render plans based on filters
         function renderPlans() {
             // Clear container
             plansContainer.innerHTML = '';
             
-            // Filter plans by location
             let filteredPlans = vpsPlans;
             if (currentLocation !== 'all') {
                 filteredPlans = vpsPlans.filter(plan => plan.location === currentLocation);
             }
             
-            // Sort plans
             filteredPlans = sortPlans(filteredPlans, currentSort);
             
-            // Show empty state if no plans
             if (filteredPlans.length === 0) {
                 plansContainer.innerHTML = '<div class="empty-state">Нет доступных тарифов для выбранной локации</div>';
                 return;
             }
             
-            // Render each plan
             filteredPlans.forEach((plan, index) => {
                 const planCard = createPlanCard(plan, index);
                 plansContainer.appendChild(planCard);
