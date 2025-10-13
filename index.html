@@ -375,304 +375,7 @@
     </footer>
 
     <script>
-        const vpsPlans = [
-            {
-                name: "[GRA-FR] i7-4790k #1",
-                location: "France",
-                cpu: "1 vCPU",
-                ram: "4 GB DDR4",
-                ssd: "25 GB NVME",
-                traffic: "100 Mbps",
-                price: 800
-            },
-            {
-                name: "[GRA-FR] i7-4790k #2",
-                location: "France",
-                cpu: "2 vCPU",
-                ram: "8 GB DDR4",
-                ssd: "50 GB NVME",
-                traffic: "100 Mbps",
-                price: 1400
-            },
-            {
-                name: "[GRA-FR] i7-4790k #3",
-                location: "France",
-                cpu: "3 vCPU",
-                ram: "12 GB DDR4",
-                ssd: "75 GB NVME",
-                traffic: "100 Mbps",
-                price: 2100
-            },
-            {
-                name: "[GRA-FR] i7-4790k #4",
-                location: "France",
-                cpu: "4 vCPU",
-                ram: "16 GB DDR4",
-                ssd: "100 GB NVME",
-                traffic: "100 Mbps",
-                price: 2800
-            },
-            {
-                name: "[RU-KEMEROVO] Ryzen 9 7950x #1",
-                location: "Russia",
-                cpu: "16 vCPU",
-                ram: "8 GB DDR5",
-                ssd: "100 GB NVME",
-                traffic: "100 Mbps",
-                price: 1000
-            },
-            {
-                name: "[RU-KEMEROVO] Ryzen 9 7950x #2",
-                location: "Russia",
-                cpu: "16 vCPU",
-                ram: "16 GB DDR5",
-                ssd: "200 GB NVME",
-                traffic: "100 Mbps",
-                price: 2000
-            },
-            {
-                name: "[RU-KEMEROVO] Ryzen 9 7950x #3",
-                location: "Russia",
-                cpu: "16 vCPU",
-                ram: "32 GB DDR5",
-                ssd: "400 GB NVME",
-                traffic: "100 Mbps",
-                price: 4000
-            },
-            {
-                name: "[RU-PERM] Ryzen 9 9950x",
-                location: "Russia",
-                cpu: "32 vCPU",
-                ram: "8 GB DDR5",
-                ssd: "100 GB NVME",
-                traffic: "100 Mbps",
-                price: 1000
-            },
-            {
-                name: "[RU-PERM] Ryzen 9 9950x #2",
-                location: "Russia",
-                cpu: "32 vCPU",
-                ram: "16 GB DDR5",
-                ssd: "200 GB NVME",
-                traffic: "100 Mbps",
-                price: 2000
-            },
-            {
-                name: "[RU-PERM] Ryzen 9 9950x #3",
-                location: "Russia",
-                cpu: "32 vCPU",
-                ram: "32 GB DDR5",
-                ssd: "400 GB NVME",
-                traffic: "100 Mbps",
-                price: 4000
-            },
-            {
-                name: "[RU-PERM] EPYC 9124 #1",
-                location: "Russia",
-                cpu: "2 vCPU",
-                ram: "2 GB DDR5",
-                ssd: "50 GB NVME",
-                traffic: "100 Mbps",
-                price: 500
-            },
-            {
-                name: "[RU-PERM] EPYC 9124 #2",
-                location: "Russia",
-                cpu: "2 vCPU",
-                ram: "4 GB DDR5",
-                ssd: "100 GB NVME",
-                traffic: "100 Mbps",
-                price: 1000
-            },
-            {
-                name: "[RU-PERM] EPYC 9124 #3",
-                location: "Russia",
-                cpu: "4 vCPU",
-                ram: "8 GB DDR5",
-                ssd: "200 GB NVME",
-                traffic: "100 Mbps",
-                price: 2000
-            },
-            {
-                name: "[RU-MSK] Ryzen 9 7950x #1",
-                location: "Russia",
-                cpu: "16 vCPU",
-                ram: "8 GB DDR5",
-                ssd: "100 GB NVME",
-                traffic: "100 Mbps",
-                price: 1000
-            },
-            {
-                name: "[RU-MSK] Ryzen 9 7950x #2",
-                location: "Russia",
-                cpu: "16 vCPU",
-                ram: "16 GB DDR5",
-                ssd: "200 GB NVME",
-                traffic: "100 Mbps",
-                price: 2000
-            },
-            {
-                name: "[RU-MSK] Ryzen 9 7950x #3",
-                location: "Russia",
-                cpu: "16 vCPU",
-                ram: "32 GB DDR5",
-                ssd: "400 GB NVME",
-                traffic: "100 Mbps",
-                price: 4000
-            },
-            {
-                name: "[RU-MSK] Ryzen 9 5900x #1",
-                location: "Russia",
-                cpu: "2 vCPU",
-                ram: "4 GB DDR4",
-                ssd: "60 GB NVME",
-                traffic: "1 Gbps",
-                price: 1000
-            },
-            {
-                name: "[RU-MSK] Ryzen 9 5900x #2",
-                location: "Russia",
-                cpu: "4 vCPU",
-                ram: "8 GB DDR4",
-                ssd: "80 GB NVME",
-                traffic: "1 Gbps",
-                price: 2200
-            },
-            {
-                name: "[RU-MSK] Ryzen 9 5900x #3",
-                location: "Russia",
-                cpu: "6 vCPU",
-                ram: "12 GB DDR4",
-                ssd: "100 GB NVME",
-                traffic: "1 Gbps",
-                price: 3000
-            },
-            {
-                name: "[RU-MSK] Ryzen 9 5900x #4",
-                location: "Russia",
-                cpu: "8 vCPU",
-                ram: "16 GB DDR4",
-                ssd: "120 GB NVME",
-                traffic: "1 Gbps",
-                price: 4200
-            },
-            {
-                name: "[RU-MSK] Ryzen 9 5900x #5",
-                location: "Russia",
-                cpu: "8 vCPU",
-                ram: "32 GB DDR4",
-                ssd: "150 GB NVME",
-                traffic: "1 Gbps",
-                price: 7000
-            },
-            {
-            name: "[PL-WAW] Epyc 7351p #1",
-            location: "Poland",
-            cpu: "4 vCPU",
-            ram: "8 GB DDR4",
-            ssd: "30 GB NVME",
-            traffic: "10 Gbps",
-            price: 1000
-        },
-        {
-            name: "[PL-WAW] Epyc 7351p #2",
-            location: "Poland",
-            cpu: "4 vCPU",
-            ram: "16 GB DDR4",
-            ssd: "75 GB NVME",
-            traffic: "10 Gbps",
-            price: 2000
-        },
-        {
-            name: "[PL-WAW] Epyc 7351p #3",
-            location: "Poland",
-            cpu: "4 vCPU",
-            ram: "24 GB DDR4",
-            ssd: "120 GB NVME",
-            traffic: "10 Gbps",
-            price: 3000
-        },
-        {
-            name: "[PL-WAW] Epyc 7351p #4",
-            location: "Poland",
-            cpu: "8 vCPU",
-            ram: "32 GB DDR4",
-            ssd: "150 GB NVME",
-            traffic: "10 Gbps",
-            price: 4000
-        },
-        {
-            name: "[PL-WAW] Epyc 7351p #5",
-            location: "Poland",
-            cpu: "8 vCPU",
-            ram: "40 GB DDR4",
-            ssd: "250 GB NVME",
-            traffic: "10 Gbps",
-            price: 5000
-        },
-        {
-            name: "[PL-WAW] Epyc 7351p #6",
-            location: "Poland",
-            cpu: "8 vCPU",
-            ram: "48 GB DDR4",
-            ssd: "300 GB NVME",
-            traffic: "10 Gbps",
-            price: 5600
-        },
-        {
-            name: "[PL-WAW] Epyc 7351p #7",
-            location: "Poland",
-            cpu: "8 vCPU",
-            ram: "56 GB DDR4",
-            ssd: "350 GB NVME",
-            traffic: "10 Gbps",
-            price: 6599
-        },
-        {
-            name: "[PL-WAW] Epyc 7351p #8",
-            location: "Poland",
-            cpu: "16 vCPU",
-            ram: "64 GB DDR4",
-            ssd: "400 GB NVME",
-            traffic: "10 Gbps",
-            price: 7200
-        },
-        {
-            "name": "[RU-KEMEROVO] 2x E5-2670 #1",
-            "location": "Russia",
-            "cpu": "4 vCore",
-            "ram": "2 GB DDR3 ECC REG",
-            "ssd": "30 GB SSD",
-            "traffic": "100 Mbps",
-            "price": 300.00
-        },
-        {
-            "name": "[RU-KEMEROVO] 2x E5-2670 #2",
-            "location": "Russia",
-            "cpu": "4 vCore",
-            "ram": "4 GB DDR3 ECC REG",
-            "ssd": "60 GB SSD",
-            "traffic": "100 Mbps",
-            "price": 600.00
-        },
-        {
-            "name": "[RU-KEMEROVO] 2x E5-2670 #3",
-            "location": "Russia",
-            "cpu": "6 vCore",
-            "ram": "8 GB DDR3 ECC REG",
-            "ssd": "120 GB SSD",
-            "traffic": "100 Mbps",
-            "price": 1200.00
-        }, 
-        {
-            "name": "[RU-KEMEROVO] 2x E5-2670 #4",
-            "location": "Russia",
-            "cpu": "8 vCore",
-            "ram": "8 GB DDR3 ECC REG",
-            "ssd": "240 GB SSD",
-            "traffic": "100 Mbps",
-            "price": 2200.00
-        },
+        const vpsPlans = [            
     {
         "name": "[DE] Ryzen 9 7950X Flex",
         "location": "Germany",
@@ -680,7 +383,7 @@
         "ram": "8 GB DDR5",
         "ssd": "100 GB NVME",
         "traffic": "1000 Mbps",
-        "price": 899.00
+        "price": 1000.00
     },
     {
         "name": "[DE] Ryzen 9 7950X Blaze",
@@ -689,7 +392,7 @@
         "ram": "16 GB DDR5",
         "ssd": "200 GB NVME",
         "traffic": "1000 Mbps",
-        "price": 1699.00
+        "price": 2000.00
     },
     {
         "name": "[DE] Ryzen 9 7950X Pulse",
@@ -698,7 +401,7 @@
         "ram": "24 GB DDR5",
         "ssd": "250 GB NVME",
         "traffic": "1000 Mbps",
-        "price": 2199.00
+        "price": 2499.00
     },
     {
         "name": "[DE] Ryzen 9 7950X Turbo",
@@ -707,7 +410,7 @@
         "ram": "32 GB DDR5",
         "ssd": "300 GB NVME",
         "traffic": "1000 Mbps",
-        "price": 2699.00
+        "price": 3000.00
     },
     {
         "name": "[DE] Ryzen 9 7950X Inferno",
@@ -716,7 +419,7 @@
         "ram": "48 GB DDR5",
         "ssd": "400 GB NVME",
         "traffic": "1000 Mbps",
-        "price": 4499.00
+        "price": 4399.00
     },
     {
         "name": "[DE] Ryzen 9 7950X Quantum",
